@@ -26,6 +26,6 @@ jobs:
       - name: Clippy
         run: cargo clippy --all-targets -- -D warnings -W clippy::pedantic
       - name: Build
-        run: cargo build
+        run: cargo build --locked
       - name: Run tests
-        run: cargo test
+        run: cargo test --all-targets --locked
